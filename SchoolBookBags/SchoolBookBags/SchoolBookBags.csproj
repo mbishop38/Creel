@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1016BBCC-B4EA-43C4-9D23-CC38C8C6334B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Converters</RootNamespace>
+    <AssemblyName>SchoolBookBags</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AddAllStudentsPage.xaml.cs">
+      <DependentUpon>AddAllStudentsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddANewStudent.xaml.cs">
+      <DependentUpon>AddANewStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CheckInConfirmationDialog.xaml.cs">
+      <DependentUpon>CheckInConfirmationDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ComboBoxExtension.cs" />
+    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Converters\BoolToForegroundColorRedConverter.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\IsDirtyToImageConverter.cs" />
+    <Compile Include="Converters\StringToVisibilityConverter.cs" />
+    <Compile Include="Converters\UIElementShowingConverter.cs" />
+    <Compile Include="DropDownButton.cs" />
+    <Compile Include="HistoryView.xaml.cs">
+      <DependentUpon>HistoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InputStartup.xaml.cs">
+      <DependentUpon>InputStartup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\AddANewStudentViewModel.cs" />
+    <Compile Include="ViewModels\CheckInConfirmationViewModel.cs" />
+    <Compile Include="Common\RequiredAttribute.cs" />
+    <Compile Include="Converters\BookStatusConverter.cs" />
+    <Compile Include="Converters\CheckedOutBookTextConverter.cs" />
+    <Compile Include="Converters\HasBooksToImageConverter.cs" />
+    <Compile Include="Converters\HistoryLineConverter.cs" />
+    <Compile Include="Converters\ShowingInfoToImageConverter.cs" />
+    <Compile Include="IObservableCollection.cs" />
+    <Compile Include="Models\BookBag.cs" />
+    <Compile Include="Models\DatabaseReader.cs" />
+    <Compile Include="Models\History.cs" />
+    <Compile Include="Models\ModelBase.cs" />
+    <Compile Include="Models\NotifyAndDataError.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="StudentView.xaml.cs">
+      <DependentUpon>StudentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\UnitTestUtility.cs" />
+    <Compile Include="ViewModels\AStudentViewModel.cs" />
+    <Compile Include="ViewModels\BookBagsViewModel.cs" />
+    <Compile Include="ViewModels\HistoryViewViewModel.cs" />
+    <Compile Include="ViewModels\InputStartupViewModel.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\OneBookBagViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelInterface.cs" />
+    <Compile Include="ViewModels\StudentViewModel.cs" />
+    <Page Include="AddAllStudentsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddANewStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BookBagView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CheckInConfirmationDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HistoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InputStartup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BookBagView.xaml.cs">
+      <DependentUpon>BookBagView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="StudentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\bright_book_standing_blue_T.png" />
+    <Resource Include="res\bright_book_standing_blue_T_hilight.png" />
+    <Resource Include="res\bright_book_standing_grey.png" />
+    <Resource Include="res\bright_book_standing_grey_used.png" />
+    <Resource Include="res\bright_book_standing_red_T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="database.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\DeleteRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\arrowleftsmall.bmp" />
+    <Resource Include="res\arrowrightsmall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\new_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\delete_x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\arrowrightsmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\arrowleftsmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\book-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\book-clip-art-1.jpg" />
+    <Resource Include="res\Book_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\BlueBook.png" />
+    <Resource Include="res\GreyBook.png" />
+    <Resource Include="res\RedBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\SaveDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\SaveEnabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\SaveDisabled2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\exclamation.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

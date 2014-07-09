@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Class id="1">
+<teacher name="Mr. Langlie">
+<school name="Dr. W. J. Creel School Soaring Eagle" />
+<bookbagset id="33" BookCount="25" />
+<students>
+ 
+  <lastID id="19"></lastID>
+  <student firstname="Maddalyn" lastname="Alary" id="1" /><student firstname="Kylee" lastname="Benzel" id="2" /><student firstname="Hailey" lastname="Billsborrow" id="3" /><student firstname="Emma" lastname="Brown" id="4" /><student firstname="Issac" lastname="Buonadonna" id="5" /><student firstname="Victoria" lastname="Cafiero" id="6" /><student firstname="Reese" lastname="Cluff" id="7" /><student firstname="Courtney" lastname="Davis" id="8" /><student firstname="Tyrese" lastname="Dorsett" id="9" /><student firstname="Haley" lastname="Gemmel" id="10" /><student firstname="Lilee" lastname="Hjelm" id="11" /><student firstname="Jack" lastname="Kirk" id="12" /><student firstname="Cassandra" lastname="Logsdon" id="13" /><student firstname="Autumn" lastname="Maroska" id="14" /><student firstname="Tavner" lastname="Phillips" id="15" /><student firstname="Daniel" lastname="Rice" id="16" /><student firstname="Owen" lastname="Sweet-Lilienthal" id="17" /><student firstname="Rylan" lastname="Weldon" id="18" /><student firstname="Jacob" lastname="Williams" id="19" /></students>
+ 
+<gradelevel>Third</gradelevel></teacher>
+
+<BagsData> 
+<bag id="1" checkedoutstudent="" />
+  <bag id="2" checkedoutstudent="17" />
+  <bag id="3" checkedoutstudent="" />
+  <bag id="4" checkedoutstudent="" />
+  <bag id="5" checkedoutstudent="" />
+  <bag id="6" checkedoutstudent="" />
+  <bag id="7" checkedoutstudent="" />
+  <bag id="8" checkedoutstudent="" />
+  <bag id="9" checkedoutstudent="" />
+  <bag id="10" checkedoutstudent="" />
+  <bag id="11" checkedoutstudent="" />
+  <bag id="12" checkedoutstudent="" />
+  <bag id="13" checkedoutstudent="6" />
+  <bag id="14" checkedoutstudent="" />
+  <bag id="15" checkedoutstudent="" />
+  <bag id="16" checkedoutstudent="" />
+  <bag id="17" checkedoutstudent="2" />
+  <bag id="18" checkedoutstudent="" />
+  <bag id="19" checkedoutstudent="" />
+  <bag id="20" checkedoutstudent="" />
+  <bag id="21" checkedoutstudent="" />
+  <bag id="22" checkedoutstudent="" />
+  <bag id="23" checkedoutstudent="" />
+  <bag id="24" checkedoutstudent="" />
+  <bag id="25" checkedoutstudent="" />
+</BagsData>
+
+
+<History>
+<Bag id="18" studentid="1" out="2/12/2013 9:27:31 AM" sharingsheet="false" memo="" /><Bag id="17" studentid="2" out="2/12/2013 9:27:44 AM" sharingsheet="false" memo="" /><Bag id="16" studentid="3" out="2/12/2013 9:27:53 AM" sharingsheet="false" memo="" /><Bag id="15" studentid="4" out="2/12/2013 9:28:04 AM" sharingsheet="false" memo="" /><Bag id="14" studentid="5" out="2/12/2013 9:28:19 AM" sharingsheet="false" memo="" /><Bag id="13" studentid="6" out="2/12/2013 9:28:28 AM" sharingsheet="false" memo="" /><Bag id="12" studentid="7" out="2/12/2013 9:29:10 AM" sharingsheet="false" memo="" /><Bag id="11" studentid="8" out="2/12/2013 9:29:17 AM" sharingsheet="false" memo="" /><Bag id="10" studentid="9" out="2/12/2013 9:29:26 AM" sharingsheet="false" memo="" /><Bag id="9" studentid="10" out="2/12/2013 9:29:33 AM" sharingsheet="false" memo="" /><Bag id="8" studentid="11" out="2/12/2013 9:29:42 AM" sharingsheet="false" memo="" /><Bag id="7" studentid="12" out="2/12/2013 9:29:54 AM" sharingsheet="false" memo="" /><Bag id="6" studentid="13" out="2/12/2013 9:30:02 AM" sharingsheet="false" memo="" /><Bag id="5" studentid="14" out="2/12/2013 9:30:11 AM" sharingsheet="false" memo="" /><Bag id="4" studentid="15" out="2/12/2013 9:30:29 AM" sharingsheet="false" memo="" /><Bag id="3" studentid="16" out="2/12/2013 9:30:39 AM" sharingsheet="false" memo="" /><Bag id="2" studentid="17" out="2/12/2013 9:30:52 AM" sharingsheet="false" memo="" /><Bag id="1" studentid="18" out="2/12/2013 9:31:02 AM" sharingsheet="false" memo="" /><Bag id="25" studentid="19" out="2/12/2013 9:31:12 AM" sharingsheet="false" memo="" /><Bag id="7" studentid="12" in="2/14/2013 2:12:46 PM" sharingsheet="true" memo="" /><Bag id="6" studentid="13" in="2/14/2013 2:13:06 PM" sharingsheet="true" memo="" /><Bag id="14" studentid="5" in="2/14/2013 2:13:24 PM" sharingsheet="true" memo="" /><Bag id="18" studentid="1" in="2/14/2013 2:13:32 PM" sharingsheet="true" memo="" /><Bag id="13" studentid="6" in="2/14/2013 2:13:39 PM" sharingsheet="true" memo="" /><Bag id="15" studentid="4" in="2/15/2013 2:11:32 PM" sharingsheet="true" memo="" /><Bag id="9" studentid="10" in="2/15/2013 2:11:42 PM" sharingsheet="true" memo="" /><Bag id="16" studentid="3" in="2/15/2013 2:11:55 PM" sharingsheet="true" memo="" /><Bag id="4" studentid="15" in="2/19/2013 2:31:05 PM" sharingsheet="true" memo="" /><Bag id="1" studentid="18" in="2/20/2013 9:54:11 AM" sharingsheet="true" memo="" /><Bag id="18" studentid="1" in="2/20/2013 9:59:07 AM" sharingsheet="true" memo="" /><Bag id="15" studentid="4" in="2/20/2013 9:59:28 AM" sharingsheet="true" memo="" /><Bag id="16" studentid="3" in="2/20/2013 9:59:32 AM" sharingsheet="true" memo="" /><Bag id="14" studentid="5" in="2/20/2013 9:59:37 AM" sharingsheet="true" memo="" /><Bag id="12" studentid="7" in="2/20/2013 10:00:05 AM" sharingsheet="true" memo="" /><Bag id="11" studentid="8" in="2/20/2013 10:00:09 AM" sharingsheet="true" memo="" /><Bag id="10" studentid="9" in="2/20/2013 10:00:15 AM" sharingsheet="true" memo="" /><Bag id="9" studentid="10" in="2/20/2013 10:00:25 AM" sharingsheet="true" memo="" /><Bag id="8" studentid="11" in="2/20/2013 10:00:30 AM" sharingsheet="true" memo="" /><Bag id="7" studentid="12" in="2/20/2013 10:00:40 AM" sharingsheet="true" memo="" /><Bag id="6" studentid="13" in="2/20/2013 10:00:51 AM" sharingsheet="true" memo="" /><Bag id="5" studentid="14" in="2/20/2013 10:00:56 AM" sharingsheet="true" memo="" /><Bag id="3" studentid="16" in="2/20/2013 10:01:02 AM" sharingsheet="true" memo="" /><Bag id="25" studentid="19" in="2/20/2013 10:01:29 AM" sharingsheet="true" memo="" /></History>
+</Class>

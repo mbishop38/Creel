@@ -1,0 +1,29 @@
+﻿<Window x:Class="Converters.CheckInConfirmationDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Binding Path=Title}"  Height="334" Width="396" BorderThickness="2" BorderBrush="LightSteelBlue">
+    <Grid Height="253" Width="360">
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300*"/>
+        </Grid.ColumnDefinitions>
+         <Grid.RowDefinitions>
+                <RowDefinition Height="55" MinHeight="45"/>
+                <RowDefinition Height="100" MinHeight="45"/>
+                    <RowDefinition Height="20" MinHeight="30"/>
+            <RowDefinition Height="45" MinHeight="45"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" TextWrapping="Wrap" Text="{Binding Path=TopLabelText}"/>
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,5,0,0">
+            <CheckBox Content="Sharing Sheet Returned" HorizontalAlignment="Left" Name="checkBox1"
+                      IsChecked="{Binding Path=HasSharingSheet}" Foreground="MediumBlue" FontWeight="ExtraBold" FontSize="16" />
+            <TextBlock  HorizontalAlignment="Left" Name="MemoLabel" Text="More Information:" Margin="0,10,0,0" />
+            <TextBox Name="memoText" TextWrapping="WrapWithOverflow" Height="53" Text ="{Binding Path=Memo}"/>
+        </StackPanel>
+        
+        <TextBlock Grid.Row="2" TextWrapping="Wrap" Margin="0,10,0,0">Continue with check in?</TextBlock>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="Yes" Name="buttonCI" Height="28" Width="60" Margin="40,0,0,0" Click="buttonCI_Click" />
+            <Button Content="Cancel" Name="buttonCancel" Height="28" Width="60" Margin="40,0,30,0" IsCancel="True"   />
+        </StackPanel>
+    </Grid>
+</Window>

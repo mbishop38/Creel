@@ -1,0 +1,105 @@
+﻿<Application x:Class="Converters.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:comn="clr-namespace:Converters.Common"
+  
+            StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <x:Array x:Key="GradeListString" Type="comn:ComboBoxItemString">
+            <comn:ComboBoxItemString ValueString = "Kindergarten"/>
+            <comn:ComboBoxItemString ValueString = "First"/>
+            <comn:ComboBoxItemString ValueString = "Second"/>
+            <comn:ComboBoxItemString ValueString = "Third"/>
+        </x:Array>
+        <LinearGradientBrush x:Key="MainBackgroundBrush"
+                        StartPoint="0,0" EndPoint="1,0">
+            <LinearGradientBrush.GradientStops>
+                <GradientStop Offset="0" Color="White"/>
+                <GradientStop Offset="1" Color="Red"/>
+            </LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="BorderBG" EndPoint="0,0.012" StartPoint="0,0.435">
+            <GradientStop Color="#FFE7EBF4" Offset="0"/>
+            <GradientStop Color="#FFDEE2ED" Offset="1"/>
+            <GradientStop Color="#FFC9D1E0" Offset="0.962"/> 
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="TitleBackgroundBrush" Color="#FF9CA2B9"/>
+        <SolidColorBrush x:Key="PanelBorderBrush" Color="#FF9CA2B9"/>
+        <SolidColorBrush x:Key="PanelBackgroundBrush" Color="#FFE2E4EC"/>
+        <SolidColorBrush x:Key="WindowBorderBrush" Color="#FF515462"/>
+        <Style x:Key="NoChromeButton" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="Chrome" Background="Transparent" SnapsToDevicePixels="true">
+                            <ContentPresenter Margin="10" RecognizesAccessKey="True" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#ADADAD"/>
+                                <Setter Property="Opacity" TargetName="Chrome" Value="0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CircleButton" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                                <Grid x:Name="Circle" Background="Transparent">
+                                    <Ellipse Fill="{TemplateBinding Background}"/>
+                                    <ContentPresenter Margin="6" Content="{TemplateBinding Content}"
+                                  HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center"/>
+                                </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#ADADAD"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="Header" TargetType="Grid">
+            <Setter Property="Background" Value="{StaticResource TitleBackgroundBrush}"/>
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="Grid.Row" Value="0"/>
+        </Style>
+
+        <Style x:Key="TitleBorder" TargetType="Border">  
+            <Setter Property="CornerRadius" Value="2"/>
+          <!--  <Setter Property="Background" Value="{StaticResource MainBackgroundBrush}"/> -->
+            <Setter Property="Margin" Value="2,2,2,2"/>
+            <Setter Property="Grid.Column" Value="0"/>
+        </Style>
+
+        <Style x:Key="TitleText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Foreground" Value="#FF14517B"/>
+            <Setter Property="Margin" Value="10,3,0,0"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+        </Style>
+
+        <Style x:Key="ResetButton" TargetType="Button">
+            <Setter Property="Grid.Column" Value="2"/>
+            <Setter Property="Margin" Value="2,2,2,2"/>
+            <Setter Property="Width" Value="40"/>
+        </Style>
+
+        <Style x:Key="ClearButton" TargetType="ToggleButton">
+            <Setter Property="Grid.Column" Value="2"/>
+            <Setter Property="Margin" Value="2,2,2,2"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+    </Application.Resources>
+</Application>

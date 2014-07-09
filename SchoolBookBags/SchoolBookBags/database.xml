@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Class id="1">
+<teacher name="Paige Goode">
+<gradelevel>1</gradelevel>
+<school name ="D.W. Creel Elementary"/>
+<bookbagset id="A" BookCount="25" />
+<students>
+  <student firstname = "Warren" lastname ="Banner" id = "1" />
+  <student firstname = "Camille" lastname= "Bishop" id = "2"  />
+  <student firstname = "Jesse"  id = "3" lastname= "Orange"/>
+  <student firstname = "Eddie" id = "4" lastname= "Red"/>
+  <student firstname = "Madison" id = "5" lastname= "Blue" />
+  <student firstname = "McKenzie" id = "6" lastname= "French" />
+  <student firstname = "Alison" id = "7" lastname= "Kelly"  />
+  <student firstname = "Jason" id = "8" lastname= "Smith" />
+  <student firstname = "Archie" id = "9" lastname= "Shmo" />
+  <student firstname = "Eliot" id = "10" lastname= "Elem" />
+  <student firstname = "Michael" id = "11" lastname= "Hiler"  />
+  <student firstname = "Alyssa" id = "12" lastname= "Park" />
+  <student firstname = "Donald" id = "13" lastname= "Shoals" />
+  <student firstname = "Archie" id = "14" lastname= "Linger" />
+  <student firstname = "Fred" id = "15" lastname= "Katchem" />
+  <student firstname = "Jane" id = "16" lastname= "Enver" />
+  <student firstname = "Jeff" id = "17" lastname= "Amadon" />
+  <student firstname = "Calioupe" lastname ="longnameforlastname" id = "18" />
+  <student firstname = "Johnny" lastname="Red Pants" id = "19" />
+  <student firstname = "Justin" id = "20" lastname= "Arnold" />
+  <lastID id ="20"></lastID>
+</students>
+ 
+</teacher>
+
+<BagsData> 
+<bag id="1" checkedoutstudent ="2"/>
+  <bag id="2" checkedoutstudent ="1"/>
+  <bag id="3" checkedoutstudent =""/>
+  <bag id="4" checkedoutstudent =""/>
+  <bag id="5" checkedoutstudent ="5"/>
+  <bag id="6" checkedoutstudent =""/>
+  <bag id="7" checkedoutstudent =""/>
+  <bag id="8" checkedoutstudent ="8"/>
+  <bag id="9" checkedoutstudent =""/>
+  <bag id="10" checkedoutstudent =""/>
+  <bag id="11" checkedoutstudent =""/>
+  <bag id="12" checkedoutstudent =""/>
+  <bag id="13" checkedoutstudent ="18"/>
+  <bag id="14" checkedoutstudent =""/>
+  <bag id="15" checkedoutstudent =""/>
+  <bag id="16" checkedoutstudent =""/>
+  <bag id="17" checkedoutstudent =""/>
+  <bag id="18" checkedoutstudent ="7"/>
+  <bag id="19" checkedoutstudent =""/>
+  <bag id="20" checkedoutstudent ="19"/>
+  <bag id="21" checkedoutstudent =""/>
+  <bag id="22" checkedoutstudent =""/>
+  <bag id="23" checkedoutstudent =""/>
+  <bag id="24" checkedoutstudent =""/>
+  <bag id="25" checkedoutstudent ="10"/>
+  <bag id="26" checkedoutstudent =""/>
+</BagsData>
+
+
+<History>
+<Bag id ="1" studentid ="2" out="05/01/2011"/>
+<Bag id ="1" studentid ="2" in="05/02/2011" sharingsheet="true" memo=""/>
+  <Bag id ="24" studentid ="2" out="04/01/2011"/>
+  <Bag id ="24" studentid ="2" in="05/02/2011" sharingsheet="false" memo="Needs sharing sheet"/>
+  <Bag id ="24" studentid ="1" out="04/11/2011"/>
+  <Bag id ="24" studentid ="1" in="05/11/2011" sharingsheet="true" memo="Reads slowly"/>
+</History>
+</Class>

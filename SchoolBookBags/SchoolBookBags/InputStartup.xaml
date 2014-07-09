@@ -1,0 +1,99 @@
+﻿<Window x:Class="Converters.InputStartup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:comn="clr-namespace:Converters.Common"
+        xmlns:converter ="clr-namespace:Converters"
+        x:Name="InputStartupWindow"
+        Title="Please input all class information below" Height="360" Width="522" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" WindowStyle="None" BorderThickness="5" BorderBrush="#FFC2CCDB" ShowInTaskbar="False" AllowsTransparency="True" Background="#FFF0F0F0">
+   
+    <Window.Resources>
+
+        <Style x:Key="imageButton" TargetType="Button" >
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <converter:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    <DataTemplate x:Key="oneStudentInputTemplate" >
+        <StackPanel Orientation="Horizontal" >
+                <Label Content="{Binding Path=Index,UpdateSourceTrigger=PropertyChanged}"></Label>
+                    <Label >Student First Name:</Label>
+                <TextBox  Text="{Binding Path=FirstName,UpdateSourceTrigger=PropertyChanged}" Margin="2" Height="20" MinWidth="100" Loaded="FocusTextBoxOnLoad"></TextBox>
+            <Label >Student Last Name:</Label>
+                <TextBox Name="LastNameTextBox" Height="20" Text="{Binding Path=LastName,UpdateSourceTrigger=PropertyChanged}" Margin="2" MinWidth="120" >
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding _SaveStudentCommand}" Key="Enter" />
+                    </TextBox.InputBindings>
+                </TextBox>
+               <Button Style="{StaticResource imageButton}" Command="{Binding _SaveStudentCommand}" Height="20" > 
+                    <Image Source="/res/Check.png" Margin="2"></Image>
+                    </Button>
+            </StackPanel>
+    </DataTemplate>
+</Window.Resources>
+    
+    <Grid  x:Name ="MainInputStartupGrid" UseLayoutRounding="True">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0"  Background="{StaticResource BorderBG}" BorderBrush="Gray" BorderThickness="1">
+        <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold"  FontSize="14"  HorizontalAlignment="Left" Name="textBlock1" VerticalAlignment="Center" Height="42" Text="{Binding HeaderText}" />
+        </Border>
+        <Grid Grid.Row="1"  Visibility="{Binding Path=ShowBasicInput, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="2.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Margin="10" >Teacher Name:</Label>
+            <TextBox Grid.Column="1" TextWrapping="Wrap" Height="24" Margin="0,0,6,0" Text="{Binding TeacherName,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Label Grid.Row="1" Grid.Column="0" Margin="10">Grade:</Label>
+            <ComboBox Grid.Row="1" Grid.Column="1" Height="24" Margin="0,0,6,0"  
+                      ItemsSource="{StaticResource GradeListString}" 
+                        DisplayMemberPath="ValueString" 
+                        SelectedValuePath="ValueString" 
+                        SelectedValue="{Binding Grade}" />
+            <Label Grid.Row="2" Grid.Column="0" Margin="10">Number Of Students:</Label>
+            <TextBox Grid.Row="2" Grid.Column="1"  Height="24"  PreviewTextInput="TextBox_PreviewTextInput" TextWrapping="Wrap" Margin="0,0,6,0"  Text="{Binding NumStudents,UpdateSourceTrigger=PropertyChanged}" MaxLength="2"></TextBox>
+         </Grid>
+        <Grid Grid.Row="1"  Visibility="{Binding Path=ShowStudents, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+              
+            </Grid.RowDefinitions>
+            <ListBox Grid.Row="0" Grid.Column="0" ItemTemplate="{StaticResource oneStudentInputTemplate}" ItemsSource ="{Binding Path=InputtedStudents, Mode=TwoWay}">
+ 
+            </ListBox>
+        </Grid>
+
+        <Grid Grid.Row="1"  Visibility="{Binding Path=ShowFinish, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Grid.Column="0" FontStretch="Expanded" TextWrapping="Wrap"> 
+                Congratulations!  All student and teacher data has been saved in the book bag program. 
+                Select finish to start managing your students bags.
+            </TextBox>
+        </Grid>
+
+        <Button Grid.Row="2" Margin="100,10, 100,10"  Command="{Binding _NextCommand}" Padding="2" Content="{Binding Path=ButtonText}" />
+
+    </Grid>
+</Window>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Class id="1">
+<teacher name="Paige Goode">
+<school name="Dr. W. J. Creel School Soaring Eagle" />
+<bookbagset id="33" BookCount="25" />
+<students>
+ 
+  <lastID id="4"></lastID>
+  <student firstname="Jessica" lastname="French" id="1" /><student firstname="K" lastname="Ellis" id="2" /><student firstname="Elvis" lastname="Presley" id="3" /><student firstname="Owen" lastname="Klein" id="4" /></students>
+ 
+<gradelevel>Kindergarten</gradelevel></teacher>
+
+<BagsData> 
+<bag id="1" checkedoutstudent="" />
+  <bag id="2" checkedoutstudent="" />
+  <bag id="3" checkedoutstudent="" />
+  <bag id="4" checkedoutstudent="" />
+  <bag id="5" checkedoutstudent="" />
+  <bag id="6" checkedoutstudent="" />
+  <bag id="7" checkedoutstudent="" />
+  <bag id="8" checkedoutstudent="" />
+  <bag id="9" checkedoutstudent="" />
+  <bag id="10" checkedoutstudent="" />
+  <bag id="11" checkedoutstudent="" />
+  <bag id="12" checkedoutstudent="" />
+  <bag id="13" checkedoutstudent="" />
+  <bag id="14" checkedoutstudent="" />
+  <bag id="15" checkedoutstudent="" />
+  <bag id="16" checkedoutstudent="" />
+  <bag id="17" checkedoutstudent="" />
+  <bag id="18" checkedoutstudent="" />
+  <bag id="19" checkedoutstudent="" />
+  <bag id="20" checkedoutstudent="" />
+  <bag id="21" checkedoutstudent="" />
+  <bag id="22" checkedoutstudent="" />
+  <bag id="23" checkedoutstudent="" />
+  <bag id="24" checkedoutstudent="" />
+  <bag id="25" checkedoutstudent="" />
+</BagsData>
+
+
+<History>
+<Bag id="2" studentid="1" out="9/19/2013 1:18:36 PM" sharingsheet="false" memo="" /><Bag id="4" studentid="3" out="9/19/2013 1:18:39 PM" sharingsheet="false" memo="" /><Bag id="4" studentid="3" in="9/19/2013 1:18:47 PM" sharingsheet="false" memo="" /><Bag id="2" studentid="1" in="9/19/2013 1:18:49 PM" sharingsheet="false" memo="" /></History>
+</Class>
