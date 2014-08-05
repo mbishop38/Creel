@@ -90,10 +90,10 @@ namespace Converters.ViewModels
             }
 
         }
-	    private DatabaseReader Database;
+	    private IDatabaseReader Database;
  
 
-        public BookBagsViewModel(DatabaseReader aDatabase)
+        public BookBagsViewModel(IDatabaseReader aDatabase)
 		{
 			Database = aDatabase;
 			if (Database == null)

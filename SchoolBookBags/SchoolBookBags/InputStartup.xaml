@@ -18,18 +18,18 @@
         <converter:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
     <DataTemplate x:Key="oneStudentInputTemplate" >
         <StackPanel Orientation="Horizontal" >
-                <Label Content="{Binding Path=Index,UpdateSourceTrigger=PropertyChanged}"></Label>
+                <Label Content="{Binding Path=Index,UpdateSourceTrigger=PropertyChanged}" Padding="4,4,0,0"></Label>
                     <Label >Student First Name:</Label>
-                <TextBox  Text="{Binding Path=FirstName,UpdateSourceTrigger=PropertyChanged}" Margin="2" Height="20" MinWidth="100" Loaded="FocusTextBoxOnLoad"></TextBox>
+                <TextBox  Text="{Binding Path=FirstName,UpdateSourceTrigger=PropertyChanged}" Margin="2" Height="20" MinWidth="100" Loaded="FocusTextBoxOnLoad" HorizontalAlignment="Right"></TextBox>
             <Label >Student Last Name:</Label>
-                <TextBox Name="LastNameTextBox" Height="20" Text="{Binding Path=LastName,UpdateSourceTrigger=PropertyChanged}" Margin="2" MinWidth="120" >
+                <TextBox Name="LastNameTextBox" Height="20" Text="{Binding Path=LastName,UpdateSourceTrigger=PropertyChanged}" Margin="2" MinWidth="120" HorizontalAlignment="Right" >
                     <TextBox.InputBindings>
                         <KeyBinding Command="{Binding _SaveStudentCommand}" Key="Enter" />
                     </TextBox.InputBindings>
                 </TextBox>
-               <Button Style="{StaticResource imageButton}" Command="{Binding _SaveStudentCommand}" Height="20" > 
+                <Button Style="{StaticResource imageButton}" Command="{Binding _SaveStudentCommand}" Height="20"  > 
                     <Image Source="/res/Check.png" Margin="2"></Image>
-                    </Button>
+                </Button>
             </StackPanel>
     </DataTemplate>
 </Window.Resources>
@@ -41,7 +41,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Border Grid.Row="0"  Background="{StaticResource BorderBG}" BorderBrush="Gray" BorderThickness="1">
-        <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold"  FontSize="14"  HorizontalAlignment="Left" Name="textBlock1" VerticalAlignment="Center" Height="42" Text="{Binding HeaderText}" />
+        <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold"  FontSize="14"  HorizontalAlignment="Left" Name="textBlock1" Height="42" Text="{Binding HeaderText}" Padding="10,0" />
         </Border>
         <Grid Grid.Row="1"  Visibility="{Binding Path=ShowBasicInput, Mode=OneWay}">
             <Grid.ColumnDefinitions>
@@ -74,9 +74,12 @@
                 <RowDefinition></RowDefinition>
               
             </Grid.RowDefinitions>
-            <ListBox Grid.Row="0" Grid.Column="0" ItemTemplate="{StaticResource oneStudentInputTemplate}" ItemsSource ="{Binding Path=InputtedStudents, Mode=TwoWay}">
- 
-            </ListBox>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <ItemsControl  Grid.Row="0" Grid.Column="0" 
+                     ItemTemplate="{StaticResource oneStudentInputTemplate}" 
+                     ItemsSource ="{Binding Path=InputtedStudents, Mode=TwoWay}">
+                </ItemsControl>
+            </ScrollViewer>
         </Grid>
 
         <Grid Grid.Row="1"  Visibility="{Binding Path=ShowFinish, Mode=OneWay}">

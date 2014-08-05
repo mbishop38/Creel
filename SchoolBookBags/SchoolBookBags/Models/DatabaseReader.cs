@@ -15,10 +15,25 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using Converters.ViewModels;
 using System.Collections.Generic;
+using Converters.Models;
+
+public interface IDatabaseReader
+{
+
+    bool SaveBagData(ObservableCollection<OneBookBagViewModel> bookBagsList);
+    bool mbImportHistory(ObservableCollection<History> h);
+    bool SaveStudents(ObservableCollection<AStudentViewModel> studentList, bool bCleared);
+    void InitBasicInfo( MainWindowViewModel viewModel );
+    bool Init();
+    bool mbImportStudents(ObservableCollection<AStudentViewModel> s);
+    bool mbImportBags(ObservableCollection<OneBookBagViewModel> b);
+    bool SaveBasicInfo(MainWindowViewModel viewModel);
+    bool SaveHistory(ObservableCollection<History> historyList, bool SaveToBackup);
+}
 
 namespace Converters.Models
 {
-    public class DatabaseReader
+    public class DatabaseReader : IDatabaseReader
     {
         private XDocument moXmlDoc;
         private string moDocumentName = "database.xml";//"..\\..\\database.xml";

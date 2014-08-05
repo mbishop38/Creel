@@ -77,8 +77,6 @@ namespace Converters.ViewModels
             InputType = BBInputType.BBInputBasic; ButtonText = "Next";
             HeaderText = "Enter teacher and class information below:";
             InputtedStudents = new ObservableCollection<StudentHolder>();
-           // StudentHolder oneStudent = new StudentHolder(this, InputtedStudents.Count + 1);
-           // InputtedStudents.Add(oneStudent);
             _NextCommand = new RelayCommand(HandleNextCommand, CanExecuteNextCommand);
         }
 
@@ -255,6 +253,7 @@ namespace Converters.ViewModels
             StudentHolder oneStudent = new StudentHolder(this, InputtedStudents.Count + 1);
             InputtedStudents.Add(oneStudent);
             NotifyPropertyChanged("InputtedStudents");
+
             return true;
 
         }

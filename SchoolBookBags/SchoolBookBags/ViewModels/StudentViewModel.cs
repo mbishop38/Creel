@@ -23,14 +23,14 @@ namespace Converters.ViewModels
     public class StudentViewModel : NotifyAndDataError, IModelViewInterface  
     {
         public ObservableCollection<AStudentViewModel> Students { get; set; }
-        private DatabaseReader Database;
+        private IDatabaseReader Database;
         public event EventHandler StudentSelectionChangedMethod;
         public RelayCommand _BookButtonPressed { get; private set; }
         public event EventHandler CheckInBookMethod;
 
        //   private ICommand newStudentCommand;
         #region Constructor
-        public StudentViewModel(DatabaseReader aDatabase)
+        public StudentViewModel(IDatabaseReader aDatabase)
         {
             Database = aDatabase;
             if (Database == null)

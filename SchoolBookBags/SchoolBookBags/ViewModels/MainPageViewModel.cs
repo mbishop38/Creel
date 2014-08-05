@@ -208,7 +208,7 @@ namespace Converters.ViewModels
         }
 
         public HistoryCollectionHolder historyHolder;
-        private DatabaseReader Database;
+        private IDatabaseReader Database;
         private bool _isDirty;
          private Visibility _historyUserControlVisibility = Visibility.Hidden;
         public Visibility HistoryUserControlVisibility
@@ -252,7 +252,7 @@ namespace Converters.ViewModels
             if (Database == null)
                 throw new ArgumentNullException("Database.xml Instance");
 
-          Database.SaveBasicInfo(this);
+            Database.SaveBasicInfo(this);
             Database.SaveHistory(this.historyHolder.HistoryRepository, false);
 
             if (studentData != null)
