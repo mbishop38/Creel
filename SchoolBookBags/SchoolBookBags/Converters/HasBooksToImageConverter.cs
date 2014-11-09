@@ -27,8 +27,7 @@ namespace Converters
 
              if (hasBooks == true)
                  oImageName = App.currentBookBMP;
-         //   else
-           //      oImageName = MainWindow.unavailableBookBMP;
+             else return DependencyProperty.UnsetValue;
 
              return oImageName;
         }

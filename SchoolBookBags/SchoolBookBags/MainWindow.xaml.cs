@@ -19,6 +19,7 @@ using System.Diagnostics;
 using Converters.Views;
 using Converters.Tests;
 using System.Collections.ObjectModel;
+using SimpleLogNS;
 
 
 
@@ -31,18 +32,15 @@ namespace Converters
     public partial class MainWindow : Window
     {
         bool bShowInputWindow = true;
-
-
         public MainWindowViewModel ViewModel { get; private set; }      
         DatabaseReader Database;
 
-
-
-  
-      //  private Popup _settingsPopup;
+    //  private Popup _settingsPopup;
 
         public MainWindow()
         {
+            SimpleLog.SetLogFile(".\\Log", "SchoolBookBagLog.xml");
+            SimpleLog.Info("MainWindow initializing.");
             InitializeComponent();
             Loaded += new RoutedEventHandler(MainPage_Loaded);
             Closing += new System.ComponentModel.CancelEventHandler(MainWindow_Closing);
@@ -52,6 +50,7 @@ namespace Converters
         void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
 
+            SimpleLog.Info("Main Page loading.");
             StudentsDataView.StudentSelectionChangedMethod += new EventHandler(SelectedStudentChanged);
             bShowInputWindow = true;
             Debug.WriteLine("Write code to check for cleared data");
@@ -60,6 +59,7 @@ namespace Converters
          }
         void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            SimpleLog.Info("Main Page closing.");
             if (ViewModel.IsDirty == true)
             {
                 if (MessageBox.Show("You have unsaved changes in this session.  Would you like to save now?", "Save Changes",
@@ -71,6 +71,7 @@ namespace Converters
 
         public bool InitViews()
         {
+            SimpleLog.Info("Main Page init views.");
 
             if (ViewModel.IsRunningTests)
             {
@@ -108,7 +109,7 @@ namespace Converters
   
         protected void CheckInBook(object sender, EventArgs e)
         {
-            Debug.WriteLine("CheckInBook called by ChildButton_Click");
+            SimpleLog.Info("CheckInBook called by ChildButton_Click.");
 
             if (sender == null)
                 throw new Exception("check in book failed");
@@ -120,7 +121,9 @@ namespace Converters
         }
 
         protected void CheckOutBook(object sender, EventArgs e)
-        {        
+        {
+            SimpleLog.Info("CheckOutBook called.");
+
             if (sender == null)
                 throw new Exception("check out book failed");
 
@@ -139,7 +142,7 @@ namespace Converters
   
         protected void SelectedStudentChanged(object sender, EventArgs e)
         {
-            Debug.WriteLine("SelectedStudentChanged called by ChildButton_Click");
+            SimpleLog.Info("SelectedStudentChanged called by ChildButton_Click.");
 
             ViewModel.SelStudentChanged();
        
@@ -198,6 +201,7 @@ namespace Converters
    
         private void Window_SourceInitialized(object sender, EventArgs e)
         {
+            SimpleLog.Info("Window_SourceInitialized.");
 
             // this is where your service call would be
             Database = new DatabaseReader();
@@ -217,8 +221,5 @@ namespace Converters
             }
 
         }
-
-
-
     }
 }

@@ -1,0 +1,498 @@
+<LogEntry Date="2014-09-14 21:56:53" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="9">
+  <Message>Test entry to see if logging works.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:53" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="9">
+  <Message>MainWindow initializing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:53" Severity="Info" Source="Converters.MainWindow.Window_SourceInitialized" ThreadId="9">
+  <Message>Window_SourceInitialized.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:53" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="9">
+  <Message>Connecting to database...</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:53" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="9">
+  <Message>App Folder: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\ XML Path: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\database.xml</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:53" Severity="Info" Source="Converters.Models.DatabaseReader.InitBasicInfo" ThreadId="9">
+  <Message>Database initializing basic information.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:53" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportStudents" ThreadId="9">
+  <Message>Intializing students list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:53" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportBags" ThreadId="9">
+  <Message>Intializing bags list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:53" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportHistory" ThreadId="9">
+  <Message>Intializing history from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:53" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateHistory" ThreadId="9">
+  <Message>Updating history.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:53" Severity="Info" Source="Converters.MainWindow.InitViews" ThreadId="9">
+  <Message>Main Page init views.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:53" Severity="Info" Source="Converters.ViewModels.AddANewStudentViewModel..ctor" ThreadId="9">
+  <Message>Adding a new student view model.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:54" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="9">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:54" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="9">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 21:56:55" Severity="Info" Source="Converters.MainWindow.MainWindow_Closing" ThreadId="9">
+  <Message>Main Page closing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:09" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="10">
+  <Message>Test entry to see if logging works.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:09" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="10">
+  <Message>MainWindow initializing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:10" Severity="Info" Source="Converters.MainWindow.Window_SourceInitialized" ThreadId="10">
+  <Message>Window_SourceInitialized.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:10" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="10">
+  <Message>Connecting to database...</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:10" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="10">
+  <Message>App Folder: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\ XML Path: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\database.xml</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:10" Severity="Info" Source="Converters.Models.DatabaseReader.InitBasicInfo" ThreadId="10">
+  <Message>Database initializing basic information.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:10" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportStudents" ThreadId="10">
+  <Message>Intializing students list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:10" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportBags" ThreadId="10">
+  <Message>Intializing bags list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:10" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportHistory" ThreadId="10">
+  <Message>Intializing history from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:10" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateHistory" ThreadId="10">
+  <Message>Updating history.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:10" Severity="Info" Source="Converters.MainWindow.InitViews" ThreadId="10">
+  <Message>Main Page init views.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:10" Severity="Info" Source="Converters.ViewModels.AddANewStudentViewModel..ctor" ThreadId="10">
+  <Message>Adding a new student view model.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:10" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="10">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:10" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="10">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:02:23" Severity="Info" Source="Converters.MainWindow.MainWindow_Closing" ThreadId="10">
+  <Message>Main Page closing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:02" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="10">
+  <Message>Test entry to see if logging works.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:02" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="10">
+  <Message>MainWindow initializing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:02" Severity="Info" Source="Converters.MainWindow.Window_SourceInitialized" ThreadId="10">
+  <Message>Window_SourceInitialized.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:02" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="10">
+  <Message>Connecting to database...</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:02" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="10">
+  <Message>App Folder: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\ XML Path: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\database.xml</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:02" Severity="Info" Source="Converters.Models.DatabaseReader.InitBasicInfo" ThreadId="10">
+  <Message>Database initializing basic information.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:02" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportStudents" ThreadId="10">
+  <Message>Intializing students list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:02" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportBags" ThreadId="10">
+  <Message>Intializing bags list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:02" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportHistory" ThreadId="10">
+  <Message>Intializing history from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:02" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateHistory" ThreadId="10">
+  <Message>Updating history.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:02" Severity="Info" Source="Converters.MainWindow.InitViews" ThreadId="10">
+  <Message>Main Page init views.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:02" Severity="Info" Source="Converters.ViewModels.AddANewStudentViewModel..ctor" ThreadId="10">
+  <Message>Adding a new student view model.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:03" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="10">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:03" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="10">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:04:31" Severity="Info" Source="Converters.MainWindow.MainWindow_Closing" ThreadId="10">
+  <Message>Main Page closing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:53" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="10">
+  <Message>Test entry to see if logging works.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:53" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="10">
+  <Message>MainWindow initializing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:54" Severity="Info" Source="Converters.MainWindow.Window_SourceInitialized" ThreadId="10">
+  <Message>Window_SourceInitialized.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:54" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="10">
+  <Message>Connecting to database...</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:54" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="10">
+  <Message>App Folder: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\ XML Path: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\database.xml</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:54" Severity="Info" Source="Converters.Models.DatabaseReader.InitBasicInfo" ThreadId="10">
+  <Message>Database initializing basic information.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:54" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportStudents" ThreadId="10">
+  <Message>Intializing students list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:54" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportBags" ThreadId="10">
+  <Message>Intializing bags list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:54" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportHistory" ThreadId="10">
+  <Message>Intializing history from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:54" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateHistory" ThreadId="10">
+  <Message>Updating history.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:54" Severity="Info" Source="Converters.MainWindow.InitViews" ThreadId="10">
+  <Message>Main Page init views.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:54" Severity="Info" Source="Converters.ViewModels.AddANewStudentViewModel..ctor" ThreadId="10">
+  <Message>Adding a new student view model.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:54" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="10">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:07:54" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="10">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:08:00" Severity="Info" Source="Converters.MainWindow.MainWindow_Closing" ThreadId="10">
+  <Message>Main Page closing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:02" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="10">
+  <Message>Test entry to see if logging works.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:02" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="10">
+  <Message>MainWindow initializing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:03" Severity="Info" Source="Converters.MainWindow.Window_SourceInitialized" ThreadId="10">
+  <Message>Window_SourceInitialized.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:03" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="10">
+  <Message>Connecting to database...</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:03" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="10">
+  <Message>App Folder: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\ XML Path: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\database.xml</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:03" Severity="Info" Source="Converters.Models.DatabaseReader.InitBasicInfo" ThreadId="10">
+  <Message>Database initializing basic information.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:03" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportStudents" ThreadId="10">
+  <Message>Intializing students list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:03" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportBags" ThreadId="10">
+  <Message>Intializing bags list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:03" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportHistory" ThreadId="10">
+  <Message>Intializing history from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:03" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateHistory" ThreadId="10">
+  <Message>Updating history.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:03" Severity="Info" Source="Converters.MainWindow.InitViews" ThreadId="10">
+  <Message>Main Page init views.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:03" Severity="Info" Source="Converters.ViewModels.AddANewStudentViewModel..ctor" ThreadId="10">
+  <Message>Adding a new student view model.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:03" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="10">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:03" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="10">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:09:07" Severity="Info" Source="Converters.MainWindow.MainWindow_Closing" ThreadId="10">
+  <Message>Main Page closing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:41" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="9">
+  <Message>Test entry to see if logging works.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:41" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="9">
+  <Message>MainWindow initializing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:41" Severity="Info" Source="Converters.MainWindow.Window_SourceInitialized" ThreadId="9">
+  <Message>Window_SourceInitialized.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:41" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="9">
+  <Message>Connecting to database...</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:41" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="9">
+  <Message>App Folder: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\ XML Path: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\database.xml</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:41" Severity="Info" Source="Converters.Models.DatabaseReader.InitBasicInfo" ThreadId="9">
+  <Message>Database initializing basic information.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:41" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportStudents" ThreadId="9">
+  <Message>Intializing students list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:41" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportBags" ThreadId="9">
+  <Message>Intializing bags list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:41" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportHistory" ThreadId="9">
+  <Message>Intializing history from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:41" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateHistory" ThreadId="9">
+  <Message>Updating history.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:41" Severity="Info" Source="Converters.MainWindow.InitViews" ThreadId="9">
+  <Message>Main Page init views.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:41" Severity="Info" Source="Converters.ViewModels.AddANewStudentViewModel..ctor" ThreadId="9">
+  <Message>Adding a new student view model.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:42" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="9">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:42" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="9">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:50" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:10:55" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:10" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="9">
+  <Message>Test entry to see if logging works.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:10" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="9">
+  <Message>MainWindow initializing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:11" Severity="Info" Source="Converters.MainWindow.Window_SourceInitialized" ThreadId="9">
+  <Message>Window_SourceInitialized.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:11" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="9">
+  <Message>Connecting to database...</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:11" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="9">
+  <Message>App Folder: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\ XML Path: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\database.xml</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:11" Severity="Info" Source="Converters.Models.DatabaseReader.InitBasicInfo" ThreadId="9">
+  <Message>Database initializing basic information.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:11" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportStudents" ThreadId="9">
+  <Message>Intializing students list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:11" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportBags" ThreadId="9">
+  <Message>Intializing bags list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:11" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportHistory" ThreadId="9">
+  <Message>Intializing history from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:11" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateHistory" ThreadId="9">
+  <Message>Updating history.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:11" Severity="Info" Source="Converters.MainWindow.InitViews" ThreadId="9">
+  <Message>Main Page init views.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:11" Severity="Info" Source="Converters.ViewModels.AddANewStudentViewModel..ctor" ThreadId="9">
+  <Message>Adding a new student view model.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:11" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="9">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:46:11" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="9">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:47:32" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:47:32" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:47:32" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:47:32" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:47:36" Severity="Info" Source="Converters.MainWindow.CheckOutBook" ThreadId="9">
+  <Message>CheckOutBook called.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:47:36" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateHistory" ThreadId="9">
+  <Message>Updating history.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:47:38" Severity="Info" Source="Converters.MainWindow.CheckInBook" ThreadId="9">
+  <Message>CheckInBook called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:47:39" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateHistory" ThreadId="9">
+  <Message>Updating history.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:48:01" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:48:01" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:48:01" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:48:01" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:48:05" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateHistory" ThreadId="9">
+  <Message>Updating history.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:48:05" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:48:05" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:48:05" Severity="Info" Source="Converters.Models.DatabaseReader.SaveBasicInfo" ThreadId="9">
+  <Message>Saving basic information to database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:48:05" Severity="Info" Source="Converters.Models.DatabaseReader.SaveHistory" ThreadId="9">
+  <Message>Saving history to database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:48:05" Severity="Info" Source="Converters.Models.DatabaseReader.SaveStudents" ThreadId="9">
+  <Message>Saving students to database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:48:05" Severity="Info" Source="Converters.Models.DatabaseReader.SaveStudents" ThreadId="9">
+  <Message>Saving students to database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:48:05" Severity="Info" Source="Converters.Models.DatabaseReader.SaveBagData" ThreadId="9">
+  <Message>Saving bag data to database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:48:09" Severity="Info" Source="Converters.MainWindow.MainWindow_Closing" ThreadId="9">
+  <Message>Main Page closing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:31" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="9">
+  <Message>Test entry to see if logging works.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:31" Severity="Info" Source="Converters.MainWindow..ctor" ThreadId="9">
+  <Message>MainWindow initializing.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:32" Severity="Info" Source="Converters.MainWindow.Window_SourceInitialized" ThreadId="9">
+  <Message>Window_SourceInitialized.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:32" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="9">
+  <Message>Connecting to database...</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:32" Severity="Info" Source="Converters.Models.DatabaseReader.mbConnectToDatabase" ThreadId="9">
+  <Message>App Folder: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\ XML Path: C:\Users\mbishop\Documents\GitHub\Creel\SchoolBookBags\SchoolBookBags\bin\Debug\database.xml</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:32" Severity="Info" Source="Converters.Models.DatabaseReader.InitBasicInfo" ThreadId="9">
+  <Message>Database initializing basic information.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:32" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportStudents" ThreadId="9">
+  <Message>Intializing students list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:32" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportBags" ThreadId="9">
+  <Message>Intializing bags list from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:32" Severity="Info" Source="Converters.Models.DatabaseReader.mbImportHistory" ThreadId="9">
+  <Message>Intializing history from database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:32" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateHistory" ThreadId="9">
+  <Message>Updating history.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:32" Severity="Info" Source="Converters.MainWindow.InitViews" ThreadId="9">
+  <Message>Main Page init views.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:32" Severity="Info" Source="Converters.ViewModels.AddANewStudentViewModel..ctor" ThreadId="9">
+  <Message>Adding a new student view model.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:32" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="9">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:50:32" Severity="Info" Source="Converters.MainWindow.MainPage_Loaded" ThreadId="9">
+  <Message>Main Page loading.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:17" Severity="Info" Source="Converters.Models.DatabaseReader.SaveBasicInfo" ThreadId="9">
+  <Message>Saving basic information to database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:17" Severity="Info" Source="Converters.Models.DatabaseReader.SaveHistory" ThreadId="9">
+  <Message>Saving history to database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:17" Severity="Info" Source="Converters.Models.DatabaseReader.SaveStudents" ThreadId="9">
+  <Message>Saving students to database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:17" Severity="Info" Source="Converters.Models.DatabaseReader.SaveBagData" ThreadId="9">
+  <Message>Saving bag data to database.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:17" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:17" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:17" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:17" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:22" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:22" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:22" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:22" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:23" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:23" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:23" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:23" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:26" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:27" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:27" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:27" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:27" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:28" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:28" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:28" Severity="Info" Source="Converters.MainWindow.SelectedStudentChanged" ThreadId="9">
+  <Message>SelectedStudentChanged called by ChildButton_Click.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:28" Severity="Info" Source="Converters.ViewModels.HistoryViewViewModel.UpdateSelectedStatus" ThreadId="9">
+  <Message>History UpdateSelectedStatus.</Message>
+</LogEntry>
+<LogEntry Date="2014-09-14 22:51:29" Severity="Info" Source="Converters.MainWindow.MainWindow_Closing" ThreadId="9">
+  <Message>Main Page closing.</Message>
+</LogEntry>

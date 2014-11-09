@@ -10,95 +10,92 @@
     <UserControl.Resources>
         <converter:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
         <converter:BoolToForegroundColorRedConverter x:Key="BoolToForegroundColorRedConverter"/>
+        <converter:ErrorStatusConverter x:Key="ErrorStatusConverter"/>
+        <converter:MemoStatusConverter x:Key="MemoStatusConverter"/>
+        <converter:BoolInverter x:Key="BoolInverter"/>
+        <converter:MemoStatusEmptyConverter x:Key="MemoStatusEmptyConverter"/>
         <Style x:Key="noHeaderList" TargetType="{x:Type GridViewColumnHeader}">
             <Setter Property="Visibility" Value="Collapsed" />
         </Style>
 
-  <!--      <Style TargetType="{x:Type ListViewItem}">
-            <Style.Resources>
-               <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent"/>
-                <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent"/>
-            </Style.Resources>
-        </Style>-->
-
         <!-- Data Template (applied to each bound report item in the collection) -->
         <DataTemplate x:Key="myHistoryLineTemplate">
-                 <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                     <RowDefinition/>
+            <Grid>
+                <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto" />
-                       <!-- <ColumnDefinition />-->
-                    </Grid.ColumnDefinitions>
-              <!--      <Image Grid.Row="0" Grid.Column="0" Source="/res/DeleteRed.png" Width="10" MaxWidth="10" MaxHeight="10" Height="10" ></Image> -->
-                    
-                <TextBlock Grid.Row="0" Grid.Column="0" Padding="2,5,10,0" Grid.ColumnSpan="2"  Text="{Binding Path=formattedHistoryLine1}" FontSize="14" />
-                <TextBlock Grid.Row="1" Grid.Column="0" Padding="30,0,10,0" Text="SharingSheet:" Visibility="{Binding formattedHistoryLine2, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <TextBlock Grid.Row="1" Grid.Column="1" Padding="0,0,10,0"  Grid.ColumnSpan="2" Text="{Binding Path=formattedHistoryLine2}"  Visibility="{Binding formattedHistoryLine2, Converter={StaticResource StringToVisibilityConverter}}" Foreground="{Binding SharingSheetBool, Converter={StaticResource BoolToForegroundColorRedConverter}}" />
-                <TextBlock Grid.Row="2" Grid.Column="0" Padding="30,0,10,0" Text="Memo:" Visibility="{Binding formattedHistoryLine3, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <TextBlock Grid.Row="2" Grid.Column="1"  Padding="0,0,10,0" Grid.ColumnSpan="2" Text="{Binding Path=formattedHistoryLine3}" Visibility="{Binding formattedHistoryLine3, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <Line Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="3" />
-            </Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".30*"/>
+                    <ColumnDefinition Width=".30*" />
+                    <ColumnDefinition Width=".40*" />
+                  <!--  <ColumnDefinition Width=".08*" />
+                    <ColumnDefinition Width=".08*" /> -->
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding Path=DateOccured}" FontSize="14" Padding="2,2"/>
+
+
+
+                <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="1" >
+                    <TextBlock Padding="6,2" Text="{Binding Path=EventType}" FontSize="14" />
+                    <Image Source="{Binding Path=SharingSheetBool, Converter={StaticResource ErrorStatusConverter}, Mode=OneWay}"  Width="16" Height="16" ToolTip="No sharing sheet returned"></Image>
+                    <Image Source="{Binding Path=MemoStr, Converter={StaticResource MemoStatusConverter}, Mode=OneWay}"  Width="16" Height="16" ToolTip="{Binding Path=MemoStr}"></Image>
+                </StackPanel>
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding Path=formattedBag}" FontSize="14" Padding="2,2"/>
+         </Grid>
 
         </DataTemplate>
 
     </UserControl.Resources>
 
-    <Grid  x:Name="LayoutRoot"  Background="{StaticResource BorderBG}">
+    <Grid  x:Name="LayoutRoot"  >
         <Grid.RowDefinitions>
-            <RowDefinition Height="4*"/>      
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="2*"/>
 
-            </Grid.RowDefinitions>
-                <StackPanel  Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="5" >
-                    <StackPanel Orientation="Vertical">
-                        <Label VerticalAlignment="Top" Padding="0,0,5,0">Filter:</Label>
-                        <ComboBox Margin="10,2,5,2"  Width="160" VerticalAlignment="Center" SelectedIndex="{Binding FilterType, Mode=TwoWay}">
-                            <ComboBoxItem Padding="0,2,0,2">All History</ComboBoxItem>
-                            <ComboBoxItem Padding="0,2,0,2">Outstanding Books</ComboBoxItem>
-                            <ComboBoxItem Padding="0,2,0,2">Sharing Sheet Not Returned</ComboBoxItem>
-                            <ComboBoxItem Padding="0,2,0,2">Memos</ComboBoxItem>
-                        </ComboBox>
-                    </StackPanel>
-            <CheckBox VerticalAlignment="Top" Margin="10,2,5,2"  Padding="10,0,5,0" IsChecked="{Binding Path=ShowSelectedStudentOnly, Mode=TwoWay}" >Show selected student only</CheckBox>
+        </Grid.RowDefinitions>
+        <StackPanel  Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="5,5,5.2,10" >
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,3">
+                <Label VerticalAlignment="Top">Filter:</Label>
+                <ComboBox Width="160" VerticalAlignment="Top" SelectedIndex="{Binding FilterType, Mode=TwoWay}">
+                    <ComboBoxItem Padding="0,2,0,2">All History</ComboBoxItem>
+                    <ComboBoxItem Padding="0,2,0,2">Outstanding Books</ComboBoxItem>
+                    <ComboBoxItem Padding="0,2,0,2">Sharing Sheet Not Returned</ComboBoxItem>
+                    <ComboBoxItem Padding="0,2,0,2">Memos</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <CheckBox VerticalAlignment="Top" HorizontalAlignment="Right" Margin="30,5,0,0"  IsChecked="{Binding ShowSelectedStudentOnly, Mode=TwoWay}" Content="Show selected student only" Width="198" />
         </StackPanel>
- 
-        <Grid Grid.Row="1" Margin="2" Grid.Column="0" Background="LightBlue">
+
+        <Grid Grid.Row="1" Margin="2" Grid.Column="0" Background="WhiteSmoke">
             <Grid.RowDefinitions>
-                 <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="51*"></ColumnDefinition>
+                <ColumnDefinition Width="59*"/>
             </Grid.ColumnDefinitions>
-            <ListView   Grid.Row="0"  Name="listViewOfStudents" ItemsSource="{Binding Path=MappedHistoryToStudent}" Visibility="{Binding Path=ShowList}" HorizontalContentAlignment="Stretch">
-                 <ListView.ItemTemplate >            
+            <ScrollViewer Grid.ColumnSpan="2">
+            <ListView   Grid.Row="0"  Name="listViewOfStudents" ItemsSource="{Binding Path=MappedHistoryToStudent}" Visibility="{Binding Path=ShowList}" HorizontalContentAlignment="Stretch" Grid.ColumnSpan="2" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <ListView.ItemTemplate >
                     <DataTemplate>
-                            <StackPanel  >
-                            
-                                <StackPanel Background="#FFE8E8E8" >
-                               
-                                    <TextBlock Text="{Binding studentName}" FontWeight="SemiBold" FontSize="15" Padding="5, 0, 5, 0" />
-                                <TextBlock Text="{Binding formattedNumberOfBooks}"  FontSize="15" Padding="5, 0, 5, 0" />
-                              
-                            </StackPanel>
-
-                            <ListView ItemsSource="{Binding Path=historyListWithFilter}" ItemTemplate="{StaticResource myHistoryLineTemplate}"        HorizontalContentAlignment="Stretch"/>
-                            <TextBox></TextBox>
-                           
+                        <Border CornerRadius="2" BorderThickness="2" BorderBrush="DarkGray" Margin="3,3">
+                        <StackPanel>
+                                <StackPanel Margin="10,2">
+                                        <TextBlock Text="{Binding formattedStudentName}" FontWeight="SemiBold" FontSize="18" Foreground="#FF0B9ABC"/>
+                                    <TextBlock Text="{Binding formattedNumberOfBooks}"  FontSize="15"  />
+                                </StackPanel>
+                                    <ListView  BorderBrush="DarkGray" BorderThickness="0,2,0,0"  Margin="10,10" ItemsSource="{Binding Path=historyListWithFilter}" ItemTemplate="{StaticResource myHistoryLineTemplate}"        HorizontalContentAlignment="Stretch"/>
                         </StackPanel>
+                        </Border>
                     </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-          
-          
-            <TextBlock  Grid.Row="0" Name="empty" Text="No history found for the selected criteria" Visibility="{Binding Path=ShowMessage}"/>
-  
+                </ListView.ItemTemplate>
+            </ListView>
+            </ScrollViewer>
+
+            <TextBlock  Grid.Row="0" Text="No history found for the selected criteria" Visibility="{Binding Path=ShowMessage}"  Height="254" VerticalAlignment="Center" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+
         </Grid>
         <Button Grid.Row="2" Grid.Column="0" Click="Button_Click">Print Report</Button>
     </Grid>
@@ -107,69 +104,4 @@
 
 
 
-
-
-<!--  <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Image Source="/res/bright_book_standing_grey_used.png" Width="10" MaxWidth="10" MaxHeight="10" Height="10" Margin="1,0,4,0"></Image>
-                                            <TextBlock Text="{Binding formattedHistoryLine1}" />
-                                            </StackPanel>
-                                            <TextBlock Text="{Binding formattedHistoryLine2}" Margin="13,0,0,0" />
-                                            <TextBlock Text="{Binding formattedHistoryLine3}" 
-                                                       Margin="13,0,0,0" 
-                                                       Visibility="{Binding formattedHistoryLine3, Converter={StaticResource StringToVisibilityConverter}}"/>
-                                            <TextBlock Text="Test red italics text" Foreground="Red" Margin="13,0,0,0" ></TextBlock>
-                                            <TextBlock Text="Test back highlight color yellow" Background="Yellow" Margin="13,0,0,0" ></TextBlock>
-                                            <TextBlock Text="Things that could be highlighted/icon differently, no sharing sheet, still has books out, errors in data... (eg, checkin but never checkedout)"   TextWrapping="WrapWithOverflow" FontWeight="Bold" Margin="13,0,0,0" ></TextBlock>
-
-                                        </StackPanel>    
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView> -->
-<!--       <ListView ItemsSource="{Binding Path=historyList}" >
-                                 <ListView.View>
-                                    <GridView ColumnHeaderContainerStyle="{StaticResource noHeaderList}">
-                                        <GridViewColumn Width="100"  >        
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding DateOccured, StringFormat='{}{0:dd/MM/yyyy}'}" TextAlignment="Left" TextWrapping="Wrap"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Width="150"  >
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding Action}" TextAlignment="Left" TextWrapping="Wrap"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Width="100"    >
-                                            <GridViewColumn.CellTemplate>
-                                            <DataTemplate>
-                                                <TextBlock Text="{Binding BookID}" TextAlignment="Left" TextWrapping="Wrap"/>
-                                            </DataTemplate>                                             
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Width="100"      >
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding SharingSheet}" TextAlignment="Left" TextWrapping="Wrap"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Width="200"   >
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding MemoStr}" TextAlignment="Left" TextWrapping="Wrap"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                    </GridView>
-                                  </ListView.View>
-                            </ListView>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>     -->
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleLogNS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,11 @@ namespace Commanding
         public RelayCommand(Action<object> execute, Predicate<object> canExecute)
         {
             if (execute == null)
+            {
+                SimpleLog.Error("RelayCommand execute == null");
+
                 throw new ArgumentNullException("execute");
+            }
 
             _execute = execute;
             _canExecute = canExecute;

@@ -1,4 +1,5 @@
 ﻿
+using SimpleLogNS;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -13,7 +14,6 @@ namespace Converters
     /// </summary>
     public partial class App : Application
     {
-
         public readonly static string currentBookBMP = "/res/RedBook.png";
         public readonly static string usedBookBMP = "/res/GreyBook.png";
         public readonly static string availableBookBMP = "/res/BlueBook.png";
@@ -22,9 +22,25 @@ namespace Converters
 
         public readonly static string disabledSaveBMP = "/res/SaveDisabled2.png";
         public readonly static string enabledSaveBMP = "/res/SaveEnabled.png";
-        
+        public readonly static string errorStatusBmp = "/res/exclamation.png";
+        public readonly static string memoStatusBmp = "/res/Note-icon1.png";
 
+
+        void App_Activated(object sender, EventArgs e)
+        {
+            // Application activated 
+            SimpleLog.Info("School book Bag Application activated.");
+
+        }
+
+        void App_Deactivated(object sender, EventArgs e)
+        {
+            // Application deactivated 
+            SimpleLog.Info("School book Bag Application deactivated");
+        }       
     }
+
+
 
 
 }

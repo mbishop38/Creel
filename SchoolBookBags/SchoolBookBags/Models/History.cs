@@ -54,11 +54,11 @@ namespace Converters.Models
                 switch (bookTypeIn)
                 {
                     default:
-                        return "unknown";
+                        return "Unknown";
                      case BookEvent.BookEventType.BookEventCheckIn:
-                       return "checked in";
+                       return "Checked In";
                     case BookEvent.BookEventType.BookEventCheckOut:
-                        return "checked out";
+                        return "Checked Out";
                  }
               
         }

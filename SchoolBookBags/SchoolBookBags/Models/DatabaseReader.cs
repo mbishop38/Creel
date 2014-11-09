@@ -16,6 +16,7 @@ using System.Diagnostics;
 using Converters.ViewModels;
 using System.Collections.Generic;
 using Converters.Models;
+using SimpleLogNS;
 
 public interface IDatabaseReader
 {
@@ -36,9 +37,9 @@ namespace Converters.Models
     public class DatabaseReader : IDatabaseReader
     {
         private XDocument moXmlDoc;
-        private string moDocumentName = "database.xml";//"..\\..\\database.xml";
-        private string moDocumentName2 = "database-bk.xml";//"..\\..\\database.xml";
         private XmlReader moXmlReader;
+        private string moDocumentName = "database.xml";
+        private string moDocumentNameBkup = "database-bk.xml";
 
         bool Connected = false;
 
@@ -53,11 +54,13 @@ namespace Converters.Models
             try
             {
 
+                SimpleLog.Info("Connecting to database...");
                 string sAppFolder = System.IO.Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);
                 if (sAppFolder.EndsWith("\\") == false)
                     sAppFolder += "\\";
 
                 string moXmlFullPath = sAppFolder + moDocumentName;
+                SimpleLog.Info("App Folder: " + sAppFolder + " XML Path: " + moXmlFullPath);
 
 
                 moXmlReader = XmlReader.Create(moXmlFullPath);
@@ -69,13 +72,15 @@ namespace Converters.Models
             }
             catch (SystemException e)
             {
-                Debug.WriteLine(e.Message);
+                SimpleLog.Error("Error connecting to database: " + e.Message);
+
                 return false;
             }
         }
 
         public void InitBasicInfo( MainWindowViewModel viewModel )
         {
+            SimpleLog.Info("Database initializing basic information.");
             if (Connected == false)
             {
                 MessageBox.Show("Invalid installation: file " + moDocumentName + " not found.  See your administrator for assistance.");
@@ -105,9 +110,10 @@ namespace Converters.Models
         }
         public bool SaveHistory(ObservableCollection<History> historyList, bool SaveToBackup)
         {
+            SimpleLog.Info("Saving history to database.");
             if (SaveToBackup == true)
             {
-                moXmlDoc.Save(moDocumentName2);
+                moXmlDoc.Save(moDocumentNameBkup);
                 moXmlReader.Close();
 
             } 
@@ -133,7 +139,7 @@ namespace Converters.Models
             }
             catch (SystemException e)
             {
-                Debug.WriteLine("History can't be saved to database.xml. Reason: " + e.Message);
+                SimpleLog.Error("History can't be saved to database.xml. Reason: " + e.Message);
                 return false;
             }
 
@@ -142,7 +148,8 @@ namespace Converters.Models
         }
         public bool SaveBasicInfo( MainWindowViewModel viewModel )
         {
-            moXmlDoc.Save(moDocumentName2);
+            SimpleLog.Info("Saving basic information to database.");
+            moXmlDoc.Save(moDocumentNameBkup);
             moXmlReader.Close();
             try
             {
@@ -198,7 +205,7 @@ namespace Converters.Models
             }
             catch (SystemException e)
             {
-                Debug.WriteLine("Teacher and class can't be saved to database.xml. Reason: " + e.Message);
+                SimpleLog.Error("Teacher and class can't be saved to database.xml. Reason: " + e.Message);
                 return false;
             }
 
@@ -207,6 +214,7 @@ namespace Converters.Models
         }
         public bool SaveStudents(ObservableCollection<AStudentViewModel> studentList, bool bCleared)
         {
+            SimpleLog.Info("Saving students to database.");
             try
             {
                 XElement teacherRoot = moXmlDoc.Element("Class").Element("teacher");
@@ -306,18 +314,12 @@ namespace Converters.Models
                 }
 
 
-                //id's need to be the same.
-             //   Debug.Assert(nCurID == lastId);
-
-                //students
-
-
                 lastIDElem.SetAttributeValue("id", bCleared ? 0 : nCurID);
                 Debug.WriteLine("Old Last id " + oldLastID + " new last id " + nCurID);
             }
             catch (SystemException e)
             {
-                Debug.WriteLine("Student data can't be saved to database.xml. Reason: " + e.Message);
+                SimpleLog.Error("Student data can't be saved to database.xml. Reason: " + e.Message);
                 return false;
             }
 
@@ -326,6 +328,7 @@ namespace Converters.Models
         }
         public bool SaveBagData( ObservableCollection<OneBookBagViewModel> bookBagsList)
         {
+            SimpleLog.Info("Saving bag data to database.");
             try
             {
                 XElement bags = moXmlDoc.Element("Class").Element("BagsData");
@@ -366,7 +369,7 @@ namespace Converters.Models
             }
             catch (SystemException e)
             {
-                Debug.WriteLine("Bag data can't be saved to database.xml. Reason: " + e.Message);
+                SimpleLog.Error("Bag data can't be saved to database.xml. Reason: " + e.Message);
                 return false;
             }
 
@@ -376,6 +379,7 @@ namespace Converters.Models
         }
         public bool mbImportStudents( ObservableCollection<AStudentViewModel> s)
         {
+            SimpleLog.Info("Intializing students list from database.");
             if (Connected == false)
                 throw new Exception("database not connected");
   
@@ -412,6 +416,7 @@ namespace Converters.Models
 
         public bool mbImportBags(ObservableCollection<OneBookBagViewModel> b)
         {
+            SimpleLog.Info("Intializing bags list from database.");
             if (Connected == false)
                 throw new Exception("database not connected");
   
@@ -456,6 +461,7 @@ namespace Converters.Models
 
         public bool mbImportHistory(ObservableCollection<History> h)
         {
+            SimpleLog.Info("Intializing history from database.");
             if (Connected == false)
                 throw new Exception("database not connected");
 

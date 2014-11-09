@@ -17,6 +17,7 @@ using Commanding;
 using System.ComponentModel;
 using System.Windows.Data;
 using System.Linq;
+using SimpleLogNS;
 
 namespace Converters.ViewModels
 {
@@ -135,6 +136,7 @@ namespace Converters.ViewModels
         }
         public bool CheckInBook()
         {
+
             AStudentViewModel oStudent = SelectedStudent;
 
             if (oStudent == null)

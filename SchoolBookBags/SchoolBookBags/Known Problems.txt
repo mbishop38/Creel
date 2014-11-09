@@ -1,0 +1,11 @@
+﻿9-13-2014
+Work on report looking pretty
+  need better icon for the memo and perhaps memo popup
+   
+
+Add logging for diagnosing issues when in production
+  finish logging
+
+background color for the tabbed bar
+
+unit tests

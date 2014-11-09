@@ -25,7 +25,7 @@
         </LinearGradientBrush>
         <SolidColorBrush x:Key="TitleBackgroundBrush" Color="#FF9CA2B9"/>
         <SolidColorBrush x:Key="PanelBorderBrush" Color="#FF9CA2B9"/>
-        <SolidColorBrush x:Key="PanelBackgroundBrush" Color="#FFE2E4EC"/>
+        <SolidColorBrush x:Key="PanelBackgroundBrush" Color="#B0A577"/>
         <SolidColorBrush x:Key="WindowBorderBrush" Color="#FF515462"/>
         <Style x:Key="NoChromeButton" TargetType="{x:Type Button}">
             <Setter Property="Background" Value="Transparent"/>

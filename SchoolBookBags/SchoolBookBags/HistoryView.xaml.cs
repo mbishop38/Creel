@@ -15,7 +15,6 @@ using System.ComponentModel;
 using Converters.ViewModels;
 
 
-
 namespace Converters.Views
 {
     /// <summary>
@@ -40,15 +39,10 @@ namespace Converters.Views
             if (doc != null)
             {
 
-         
-
-
                 PrintDialog dialog = new PrintDialog();
                 if (dialog.ShowDialog() == true)
                 {
-
-                    
-                    // Create IDocumentPaginatorSource from FlowDocument 
+                   
                         IDocumentPaginatorSource idpSource = doc;
                         // Call PrintDocument method to send document to printer 
 
@@ -64,3 +58,4 @@ namespace Converters.Views
         }
     }
 }
+

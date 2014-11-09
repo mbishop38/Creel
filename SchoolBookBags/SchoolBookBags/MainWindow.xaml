@@ -16,27 +16,21 @@
 
     <Grid x:Name="LayoutRoot" Background="{StaticResource BorderBG}">
         <Grid.Resources>
-            <SolidColorBrush x:Key="SidebarTabBackgroundBrushSelected" Color="LightGoldenrodYellow"></SolidColorBrush>
-            <SolidColorBrush x:Key="SidebarTabBorderBrushSelected" Color="lightGray"></SolidColorBrush>
-            <SolidColorBrush x:Key="SidebarTabBackgroundBrush" Color="LightGray"></SolidColorBrush>
+            <SolidColorBrush x:Key="SidebarTabBackgroundBrushSelected" Color="White"></SolidColorBrush>
+            <SolidColorBrush x:Key="SidebarTabBorderBrushSelected" Color="#FEDF13"></SolidColorBrush>
+            <SolidColorBrush x:Key="SidebarTabBackgroundBrush" Color="White"></SolidColorBrush>
             <SolidColorBrush x:Key="SidebarTabBorderBrush" Color="DarkGray"></SolidColorBrush>
 
             <Style x:Key="TabItemStyle" TargetType="TabItem">
-                <Setter Property="Padding" Value="5,5,5,5" />
-                <Setter Property="BorderThickness" Value="1,1,1,1" />
-                <Setter Property="Foreground"  Value="Blue"></Setter>
+                <Setter Property="Padding" Value="10,10,10,10" />
+                <Setter Property="BorderThickness" Value="2,2,2,2" />
+          <!--      <Setter Property="Foreground"  Value="Blue"></Setter> -->
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type TabItem}">
-                            <Border Padding="{TemplateBinding Padding}" 
-                Name="tab" 
-                BorderThickness="{TemplateBinding BorderThickness}" 
-                BorderBrush="{StaticResource SidebarTabBorderBrush}"
-                SnapsToDevicePixels="True">
-                                <ContentPresenter Name="content"
-                                              ContentSource="Header" />
+                            <Border Padding="{TemplateBinding Padding}"  Name="tab" BorderThickness="{TemplateBinding BorderThickness}"  BorderBrush="{StaticResource SidebarTabBorderBrush}" SnapsToDevicePixels="True" CornerRadius="4,4,0,0" Margin="2,0">
+                                <ContentPresenter Name="content" ContentSource="Header" />
                             </Border>
-
                             <ControlTemplate.Triggers>
                                 <Trigger Property="IsSelected" Value="True">
                                     <Setter TargetName="tab" Property="Background" Value="{StaticResource SidebarTabBackgroundBrushSelected}" />
@@ -118,19 +112,18 @@
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
 
-            <views:StudentView x:Name="StudentsDataView" Grid.Column="0" Grid.Row="1" Visibility="{Binding Path=UIElementShowing, Converter={StaticResource UIElementShowingConverter}, ConverterParameter=0}">
-            </views:StudentView>
+            <views:StudentView x:Name="StudentsDataView" Grid.Column="0" Grid.Row="1" Visibility="{Binding Path=UIElementShowing, Converter={StaticResource UIElementShowingConverter}, ConverterParameter=0}"></views:StudentView>
             <TabControl x:Name="BookOrHistoryTab" Background="{StaticResource BorderBG}" Grid.Column="1" Grid.Row="1" TabStripPlacement="Top" Visibility="{Binding Path=UIElementShowing, Converter={StaticResource UIElementShowingConverter}, ConverterParameter=0}">
 
                 <TabItem  Style="{DynamicResource TabItemStyle}" Background="{StaticResource BorderBG}" >
                     <TabItem.Header>
-                        <Image Name="BooksImage" Source="{Binding BookTabBMP}" Width="16" Height="16" ToolTip="Check out Books"></Image>
+                        <Image Name="BooksImage" Source="{Binding BookTabBMP}" Width="24" Height="24" ToolTip="Check out Books"></Image>
                     </TabItem.Header>
-                    <views:BookBagView Background="{StaticResource BorderBG}" x:Name="BagDataView"  Grid.Column="1" Grid.Row="1"  />
+                    <views:BookBagView Background="{StaticResource BorderBG}" x:Name="BagDataView"  Grid.Column="1" Grid.Row="1"   />
                 </TabItem>
                 <TabItem Style="{DynamicResource TabItemStyle}" Background="{StaticResource BorderBG}">
                     <TabItem.Header>
-                        <Image Name="HistoryImage" Source="res\history.png" Width="16" Height="16" ToolTip="History"></Image>
+                        <Image Name="HistoryImage" Source="res\history.png" Width="24" Height="24" ToolTip="History"></Image>
                     </TabItem.Header>
                     <views:HistoryView  Background="{StaticResource BorderBG}" x:Name="HistoryView"  Grid.Column="1" Grid.Row="1" />
                 </TabItem>

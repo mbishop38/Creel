@@ -69,9 +69,12 @@
     </Compile>
     <Compile Include="Common\ComboBoxExtension.cs" />
     <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Common\SimpleLog.cs" />
     <Compile Include="Converters\BoolToForegroundColorRedConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\ErrorStatusConverter.cs" />
     <Compile Include="Converters\IsDirtyToImageConverter.cs" />
+    <Compile Include="Converters\MemoStatusConverter.cs" />
     <Compile Include="Converters\StringToVisibilityConverter.cs" />
     <Compile Include="Converters\UIElementShowingConverter.cs" />
     <Compile Include="DropDownButton.cs" />
@@ -170,8 +173,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -194,20 +195,10 @@
     <Resource Include="res\DeleteRed.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\arrowleftsmall.bmp" />
-    <Resource Include="res\arrowrightsmall.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="res\new_plus.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="res\delete_x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="res\arrowrightsmall.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="res\arrowleftsmall.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="res\save.png" />
@@ -241,6 +232,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="res\exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Known Problems.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\Note-icon1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

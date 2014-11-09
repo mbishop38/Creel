@@ -8,6 +8,8 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Documents;
 using System.Diagnostics;
+using System.Windows.Media;
+using SimpleLogNS;
 
 namespace Converters.ViewModels
 {
@@ -25,7 +27,13 @@ namespace Converters.ViewModels
                 return "Number of bags: " + NumberOfBags.ToString();
             }
         }
-        
+        public string formattedStudentName
+        {
+            get
+            {
+                return "Student name: " + studentName;
+            }
+        }        
     
         public ObservableCollection<FormattedHistory> historyList { get; set; }
         public ObservableCollection<FormattedHistory> historyListWithFilter { get; set; }
@@ -118,6 +126,12 @@ namespace Converters.ViewModels
             }
         }
 
+        public string formattedBag
+        {
+            get { return "Bag #" + bookID; }
+          //  get { return "Bag #" + bookID + "\n" + formattedHistoryLine2   + "\n" +  MemoStr;  }
+        }
+
         public string formattedHistoryLine1
         {
 
@@ -168,8 +182,9 @@ namespace Converters.ViewModels
         {
             get
             {
-
-                return (sharingSheet);
+                if (action == BookEvent.BookEventType.BookEventCheckIn)
+                    return (sharingSheet);
+                else return true;
             }
 
         }
@@ -196,6 +211,11 @@ namespace Converters.ViewModels
         {
             get { return Memo; }
 
+        }
+
+        public string EventType
+        {
+            get { return History.FormattedBookEventType(action);  }
         }
     }
 
@@ -294,9 +314,10 @@ namespace Converters.ViewModels
             set { _selectedStudent = value; }
         }
 
-      
+
         public bool UpdateSelectedStatus()
         {
+            SimpleLog.Info("History UpdateSelectedStatus.");
 
             if (ShowSelectedStudentOnly)
             {
@@ -333,6 +354,7 @@ namespace Converters.ViewModels
 
         public FlowDocument GetDocumentPrintOutput()
         {
+            SimpleLog.Info("History GetDocumentPrintOutput.");
 
             // Create a FlowDocument dynamically. 
             FlowDocument doc = new FlowDocument();
@@ -384,6 +406,7 @@ namespace Converters.ViewModels
 
         public bool UpdateHistory(HistoryCollectionHolder historyHolder)
         {
+            SimpleLog.Info("Updating history.");
             if (MappedHistoryToStudent == null)
                 MappedHistoryToStudent = new ObservableCollection<StudentsAndHistory>();
             else MappedHistoryToStudent.Clear();

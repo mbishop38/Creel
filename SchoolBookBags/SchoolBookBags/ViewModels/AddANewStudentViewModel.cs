@@ -7,6 +7,7 @@ using Commanding;
 using System.Diagnostics;
 using System.Windows;
 using Converters.Models;
+using SimpleLogNS;
 
 
 
@@ -24,6 +25,7 @@ namespace Converters.ViewModels
        
         public AddANewStudentViewModel(MainWindowViewModel inMainVM)
         {
+            SimpleLog.Info("Adding a new student view model.");
 
             if (inMainVM == null)
                 throw new Exception("Invalid new student command");

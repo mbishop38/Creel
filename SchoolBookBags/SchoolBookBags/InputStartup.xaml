@@ -96,7 +96,7 @@
             </TextBox>
         </Grid>
 
-        <Button Grid.Row="2" Margin="100,10, 100,10"  Command="{Binding _NextCommand}" Padding="2" Content="{Binding Path=ButtonText}" />
+        <Button Grid.Row="2" Margin="100,10, 100,10"  Command="{Binding _NextCommand}" Padding="2" Content="{Binding Path=ButtonText}" IsDefault="True"/>
 
     </Grid>
 </Window>
